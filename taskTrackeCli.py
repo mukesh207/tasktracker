@@ -1,6 +1,7 @@
 import sys
 import os
 import json
+from datetime import datetime
 
 
 
@@ -51,7 +52,8 @@ def add_task(taskDescription):
     task = {
         "id": get_next_task_id(tasks),
         "description": taskDescription,
-        "status": "not done"
+        "status": "not done",
+        "created_at": datetime.now().isoformat()
     }
     tasks.append(task)
     save_tasks(tasks)
@@ -69,7 +71,8 @@ def update_task(taskId, taskDescription):
             tasks.append({
                 "id": taskId,
                 "description": taskDescription,
-                "status": task['status']
+                "status": task['status'],
+                "updated_at": datetime.now().isoformat()
             })
             save_tasks(tasks)
             print(f"Task updated with ID: {taskId}")
@@ -97,7 +100,8 @@ def update_task_status(taskId, status):
             tasks.append({
                 "id": taskId,
                 "description": task['description'],
-                "status": status
+                "status": status,
+                "updated_at": datetime.now().isoformat()
             })
             save_tasks(tasks)
             print(f"Task status updated with ID: {taskId}")
