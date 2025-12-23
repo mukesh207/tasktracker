@@ -2,6 +2,8 @@
 
 A simple command-line task management tool to help you organize and track your daily tasks.
 
+project url :: https://roadmap.sh/projects/task-tracker
+
 ## Features
 
 - ✅ Add new tasks
