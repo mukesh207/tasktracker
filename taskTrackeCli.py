@@ -184,7 +184,10 @@ def main(*args):
         if len(args) > 1:
             func(*args[1:])
         else:
-            func()
+            if func in [add_task, update_task, delete_task, update_task_status]:
+                print(f"Insufficient arguments for command: {command}")
+            else:
+                func()
 
     elif command not in commands:
         print(f"Unknown command: {command}. Use 'help' for available commands.")
