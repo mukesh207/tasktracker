@@ -14,6 +14,15 @@ project url :: https://roadmap.sh/projects/task-tracker
 
 ## Installation
 
+### Clone the Repository
+
+```bash
+git clone https://github.com/mukesh207/tasktracker.git
+cd tasktracker
+```
+
+### Requirements
+
 No external dependencies required. Just make sure you have Python 3.6+ installed.
 
 ```bash
